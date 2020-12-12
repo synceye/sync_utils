@@ -1,6 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
-description 'Function created by tinky, script made by me'
+description 'sync_utils - simple esx functions and commands'
 version '1.0.0'
 
 client_scripts {
