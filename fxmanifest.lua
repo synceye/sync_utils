@@ -1,6 +1,7 @@
-fx_version 'bodacious'
+fx_version 'cerulean'
 game 'gta5'
 description 'Function created by tinky, script made by me'
+version '1.0.0'
 
 client_scripts {
     'cl_main.lua',
