@@ -11,6 +11,22 @@ ESX.RegisterCommand('snowoff', 'admin', function(xPlayer, showError)
     xPlayer.showNotification('Snow stopped falling!')
 end)
 
+ESX.RegisterServerCallback("sync_ids:pregledajrankove", function(source, cb)
+    local player = ESX.GetPlayerFromId(source)
+
+    if player ~= nil then
+        local playerGroup = player.getGroup()
+
+        if playerGroup ~= nil then 
+            cb(playerGroup)
+        else
+            cb("user")
+        end
+    else
+        cb("user")
+    end
+end)
+
 local stoppaneresources, jeldopusteno = {}, false --> ESX github old updates
 
 for imeSkripte, razlog in pairs(Config.SkripteKojeTrebajuBitiStoppane) do
