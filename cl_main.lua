@@ -12,14 +12,14 @@ RegisterCommand('id', function()
     ESX.TriggerServerCallback("sync_ids:pregledajrankove", function(playerRank)
         if playerRank == "admin" or playerRank == "superadmin" then
           if not idovi then
-            ESX.ShowNotification('~g~ID ukljucen!')
+            ESX.ShowNotification('~g~ID on!')
             idovi = true
           else
             idovi = false
-           ESX.ShowNotification('~r~ID iskljucen!')
+           ESX.ShowNotification('~r~ID off!')
           end
         else
-           ESX.ShowNotification('~r~Nemas dozvolu za to!')
+           ESX.ShowNotification('~r~You are not an admin!')
         end
     end)
 end)
@@ -212,4 +212,21 @@ Citizen.CreateThread(function()
             end
         end
     end
+end)
+
+function AddTextEntry(key, value)
+	Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), key, value)
+end
+
+Citizen.CreateThread(function()
+  AddTextEntry('FE_THDR_GTAO', '~r~Sync World~r~| ~g~ID: ~b~' .. GetPlayerServerId(NetworkGetEntityOwner(GetPlayerPed(-1))) .. ' ~p~| ' .. '~p~Discord: ~y~https://discord.gg/pSEEteRgzJ')
+  AddTextEntry('PM_PANE_LEAVE', '~b~FiveM Server Finder~b~')
+  AddTextEntry('PM_PANE_QUIT', '~r~Leave~r~')
+  AddTextEntry('PM_SCR_MAP', '~b~Map🗺️~b~')
+  AddTextEntry('PM_SCR_GAM', '~r~Exit🎮~r~')
+  AddTextEntry('PM_SCR_INF', '~y~Info~y~📝')
+  AddTextEntry('PM_SCR_SET', '~b~Settings💻~b~')
+  AddTextEntry('PM_SCR_STA', 'Stats')
+  AddTextEntry('PM_SCR_GAL', 'Gallery📷')
+  AddTextEntry('PM_SCR_RPL', 'Rockstart Editor')
 end)
