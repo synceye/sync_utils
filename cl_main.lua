@@ -128,7 +128,7 @@ end
 local once, oldval,  oldvalped = true, false, false
 Citizen.CreateThread(function()
     while true do
-        Wait(10)
+        Wait(20)
 
         if once then
             once = false
