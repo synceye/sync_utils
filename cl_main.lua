@@ -219,7 +219,7 @@ function AddTextEntry(key, value)
 end
 
 Citizen.CreateThread(function()
-  AddTextEntry('FE_THDR_GTAO', '~r~Sync World~r~| ~g~ID: ~b~' .. GetPlayerServerId(NetworkGetEntityOwner(GetPlayerPed(-1))) .. ' ~p~| ' .. '~p~Discord: ~y~https://discord.gg/pSEEteRgzJ')
+  AddTextEntry('FE_THDR_GTAO', '~r~Sync World~r~ | ~g~ID: ~b~' .. GetPlayerServerId(NetworkGetEntityOwner(GetPlayerPed(-1))) .. ' ~p~| ' .. '~p~Discord: ~y~https://discord.gg/pSEEteRgzJ')
   AddTextEntry('PM_PANE_LEAVE', '~b~FiveM Server Finder~b~')
   AddTextEntry('PM_PANE_QUIT', '~r~Leave~r~')
   AddTextEntry('PM_SCR_MAP', '~b~Map🗺️~b~')
