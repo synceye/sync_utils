@@ -8,16 +8,6 @@ SkripteKojeTrebajuBitiStoppane = {
 	['es_ui'] = 'Money HUD for ES'
 }
 
-ESX.RegisterCommand('snow', 'admin', function(xPlayer, showError)
-    snijegon()
-    xPlayer.showNotification('Snow is falling!')
-end)
-
-ESX.RegisterCommand('snowoff', 'admin', function(xPlayer, showError)
-    snijegoff()
-    xPlayer.showNotification('Snow stopped falling!')
-end)
-
 ESX.RegisterServerCallback("sync_ids:pregledajrankove", function(source, cb)
     local player = ESX.GetPlayerFromId(source)
 
